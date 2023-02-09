@@ -1,0 +1,53 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.cabecera {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: v.$azul_oscuro;
+
+
+    .cabecera_redes {
+        @include m.grid(2, 0.1rem);
+
+        @include m.tablet {
+            display: flex;
+            margin-bottom: 0;
+            align-items: center;
+
+        }
+
+        @include m.desktop() {
+            justify-content: space-evenly;
+        }
+
+
+    }
+
+
+    img {
+        height: 4rem;
+    }
+
+    a {
+        color: v.$fuente_blanca;
+    }
+
+
+}
+
+
+.cabecera_navegacion {
+    @include m.grid(2, 2rem);
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    @include m.tablet {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,51 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+//Barra blanca
+.menu_dos{
+    @include m.grid(2,2rem);
+    background-color: white;
+    width: 100%;
+    
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        img{
+            padding-left: 3rem;
+            height: 100%;
+        }
+    }
+
+    @include m.desktop{
+        img{
+            padding-left: 25rem;
+        }
+    }
+    img{
+        height: 8rem;
+    }
+    a{
+        color: v.$fuente_oscura;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    
+}
+
+.menu_dos--elementos{
+    margin: 1rem;
+    @include m.grid(3, 2);
+
+    @include m.tablet{
+        display: flex;
+        align-items: center;
+    }
+    @include m.desktop{
+        padding-right: 14rem;
+    }
+}
+
+
+    
+

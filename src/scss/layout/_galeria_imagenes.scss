@@ -1,0 +1,42 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.carrusel-Contenedor{
+    z-index: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#boton_uno{
+    z-index: 1;
+    position: absolute;
+    margin-right: 20rem;
+    padding: 2rem;
+    border-radius: 100%;
+}
+
+#boton_dos{
+    z-index: 1;
+    position: absolute;
+    margin-left: 153rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+#boton_uno:hover{
+    background-color: red;
+}
+
+
+.carrusel-Contenedor{
+    img{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+
+
